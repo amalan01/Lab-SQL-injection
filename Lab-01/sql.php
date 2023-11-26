@@ -1,5 +1,9 @@
 <?php
-include('..\db.php');
+$dbname = "sqlilabs";
+$dbusername = "php_sqlilabs";
+$dbpassword = "sqlilabs_password";
+$dbsrvname = "localhost";
+
 $con = mysqli_connect($dbsrvname, $dbusername, $dbpassword, $dbname);
 if (!$con){
   echo('Connection ERROR');
