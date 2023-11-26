@@ -1,14 +1,9 @@
 <?php
-$dbname = "sqlilabs";
-$dbusername = "php_sqlilabs";
-$dbpassword = "sqlilabs_password";
-$dbsrvname = "localhost";
 
-$con = mysqli_connect($dbsrvname, $dbusername, $dbpassword, $dbname);
-if (!$con){
-  echo('Connection ERROR');
-  die(print_r(mysqli_error($con)));
-}
+
+$mysqli = new mysqli("localhost", "php_sqlilabs", "sqlilabs_password", "sqlilabs");
+if ($mysqli->connect_errno) {
+    die("Failed to connect to MySQL: " . $mysqli->connect_error);
 
 $query = "SELECT * FROM signin WHERE username='" . 
          $_POST['username'] . "' AND password='" .
