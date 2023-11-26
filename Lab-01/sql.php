@@ -4,6 +4,7 @@
 $mysqli = new mysqli("localhost", "php_sqlilabs", "sqlilabs_password", "sqlilabs");
 if ($mysqli->connect_errno) {
     die("Failed to connect to MySQL: " . $mysqli->connect_error);
+}
 
 $query = "SELECT * FROM signin WHERE username='" . 
          $_POST['username'] . "' AND password='" .
