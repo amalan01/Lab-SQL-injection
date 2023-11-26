@@ -1,8 +1,8 @@
 version: '3'
 services:
   db: 
-    image: php:7.2-apache
-    command: docker-php-ext-install pdo pdo_mysql mysqli
+    image: php:7.4-apache
+   
     environment:
       - MYSQL_DATABASE=sqlilabs
       - MYSQL_USER=php_sqlilabs
