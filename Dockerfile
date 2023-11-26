@@ -1,2 +1,6 @@
 FROM php:7.4-apache
-RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+# Install your extensions
+# To connect to MySQL, add mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+# Run docker-php-ext-enable command to activate mysqli
+RUN docker-php-ext-enable mysqli
